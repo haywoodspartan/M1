@@ -1,0 +1,506 @@
+
+Function cmdPrintShipment_Click()
+	controls("M1DataControl").SaveRecord
+	if trim(controls("txtSmpCustomerOrganizationID").value) = "HYDRAF" then 
+		printmeHF
+		else 
+			printme
+	end if
+	if trim(controls("txtSmpCustomerOrganizationID").value) = "DUPAGE" _ 
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "MJCELC" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "GATCOR" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "XCEL" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "BETTIN" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "DDMFG" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "NEWDIM" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "NISSIN" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "HUTCHINSON" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "TOMENS" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "LWSCHN" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "SUMMIT" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "SOLMAN" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "HEASKF" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "GERE" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "LIQUID" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "MW" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "CLEMEN" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "HYDACT" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "SVIND" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "WALCO" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "SYCAMO" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "HLPREC" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "PARATE" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "MERCUR" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "BEMMOL" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "BRAUN" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "DANE" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "BASIN" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "ORBIT" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "STANMA" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "TRYSKF" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "HUIMFG" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "SCHIND" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "PDQ" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "PBCLINEAR" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "ARKTEC" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "CASALU" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "RBROYA" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "CWM" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "PRINCE" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "FEDERA" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "HEADLY" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "OTTO" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "STP" _
+		then
+			EmailShipper
+	end if
+End Function	
+
+Function M1Command1_Click()
+	controls("M1DataControl").SaveRecord
+	if trim(controls("txtSmpCustomerOrganizationID").value) = "DUPAGE" _ 
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "MJCELC" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "GATCOR" _
+			or trim(controls("txtSmpCustomerOrganizationID").value) = "XCEL" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "BETTIN" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "DDMFG" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "NEWDIM" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "NISSIN" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "HUTCHINSON" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "TOMENS" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "LWSCHN" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "SUMMIT" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "SOLMAN" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "HEASKF" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "GERE" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "LIQUID" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "MW" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "CLEMEN" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "HYDACT" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "SVIND" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "WALCO" _
+    or trim(controls("txtSmpCustomerOrganizationID").value) = "SYCAMO" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "HLPREC" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "PARATE" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "MERCUR" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "BEMMOL" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "BRAUN" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "DANE" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "BASIN" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "ORBIT" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "STANMA" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "TRYSKF" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "HUIMFG" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "SCHIND" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "PDQ" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "PBCLINEAR" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "ARKTEC" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "CASALU" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "RBROYA" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "CWM" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "PRINCE" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "FEDERA" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "HEADLY" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "OTTO" _
+		or trim(controls("txtSmpCustomerOrganizationID").value) = "STP" _
+		then
+			EmailShipper
+	end if
+End Function
+
+function printme
+	if controls("chkSmpPrintPackingSlip").value = -1 then
+		set pff = connection.execute("SELECT smlPartID,smlShipmentLineID FROM ShipmentLines WHERE smlShipmentID=" & app.addquotes(trim(controls("txtSmpShipmentID").value)))
+		cert = 0
+		if not pff.eof then
+		do while not pff.eof 
+			set rstemp = connection.execute("SELECT uimpCertified from Parts where impPartID = " & app.addquotes(trim(pff.fields("smlPartID").Value)))
+			if not rstemp.eof then
+				if cdbl(rstemp.fields("uimpCertified").value) = -1 then
+					cert = 1
+				end if
+			end if
+			pff.MoveNext
+			loop
+		end if
+
+		'Count = 0
+		pgs = 2
+		if cert = 1 then
+			pgs = 4
+		end if
+		sid = controls("txtSmpShipmentID").value
+		doprint pgs,sid
+		end if
+end function
+Function doprint(pgs,sid)
+	if pgs = 2 then
+			set oReport = app.openreport("SM_Shipment_Print\SM_Shipment_Print_CJS.rpt")
+			
+	with oReport
+'		.ReportFilterParameters("Certified").ResetValues
+		.ReportFilterParameters("CheckboxGroup_2_Certified").AddValue true
+		.ReportFilterParameters("CheckboxGroup_3_Certification").AddValue true
+		.ReportFilterParameters("CheckboxGroup_4_Packing").AddValue false
+		.ReportFilterParameters("Filter_smpShipmentID").AddValue trim(sid)
+		.Copies= pgs
+		.Collate=False
+		.Duplex=False
+	.printreport
+		end with
+	elseif pgs > 2 then	
+		set crt = app.openreport("SM_Shipment_Print\SM_Shipment_Print_CJS.rpt")
+	with crt 
+	'		.ReportFilterParameters("Certified").ResetValues
+		.ReportFilterParameters("CheckboxGroup_3_Certification").AddValue false
+		.ReportFilterParameters("CheckboxGroup_2_Certified").AddValue false
+		.ReportFilterParameters("CheckboxGroup_4_Packing").AddValue true
+		.ReportFilterParameters("Filter_smpShipmentID").AddValue trim(sid)
+		.copies= 3
+		.printreport
+		end with
+		set sig = app.openreport("SM_Shipment_Print\SM_Shipment_Print_CJS.rpt")
+	with sig
+'		.ReportFilterParameters("Certified").ResetValues
+		.ReportFilterParameters("CheckboxGroup_3_Certification").AddValue true
+		.ReportFilterParameters("CheckboxGroup_2_Certified").AddValue true
+		.ReportFilterParameters("CheckboxGroup_4_Packing").AddValue false
+		.ReportFilterParameters("Filter_smpShipmentID").AddValue trim(sid)
+		.copies= 2
+		.printreport
+		end with
+	end if
+End Function
+	
+
+function printmeHF
+	if controls("chkSmpPrintPackingSlip").value = -1 then
+		set pff = connection.execute("SELECT smlPartID,smlShipmentLineID FROM ShipmentLines WHERE smlShipmentID=" & app.addquotes(trim(controls("txtSmpShipmentID").value)))
+		cert = 0
+		if not pff.eof then
+		do while not pff.eof 
+			set rstemp = connection.execute("SELECT uimpCertified from Parts where impPartID = " & app.addquotes(trim(pff.fields("smlPartID").Value)))
+			if not rstemp.eof then
+				if cdbl(rstemp.fields("uimpCertified").value) = -1 then
+					cert = 1
+				end if
+			end if
+			pff.MoveNext
+			loop
+		end if
+
+		'Count = 0
+		pgs = 2
+		if cert = 1 then
+			pgs = 4
+		end if
+		sid = controls("txtSmpShipmentID").value
+		doprintHF pgs,sid
+		end if
+end function
+Function doprintHF(pgs,sid)
+	if pgs = 2 then
+			set oReport = app.openreport("SM_Shipment_Print\SM_Shipment_Print_HYDRAF.rpt")
+			
+	with oReport
+'		.ReportFilterParameters("Certified").ResetValues
+		.ReportFilterParameters("CheckboxGroup_2_Certified").AddValue true
+		.ReportFilterParameters("CheckboxGroup_3_Certification").AddValue true
+		.ReportFilterParameters("CheckboxGroup_4_Packing").AddValue false
+		.ReportFilterParameters("Filter_smpShipmentID").AddValue trim(sid)
+		.Copies= pgs
+		.Collate=False
+		.Duplex=False
+	.printreport
+		end with
+	elseif pgs > 2 then	
+		set crt = app.openreport("SM_Shipment_Print\SM_Shipment_Print_HYDRAF.rpt")
+	with crt 
+'		.ReportFilterParameters("Certified").ResetValues
+		.ReportFilterParameters("CheckboxGroup_3_Certification").AddValue false
+		.ReportFilterParameters("CheckboxGroup_2_Certified").AddValue false
+		.ReportFilterParameters("CheckboxGroup_4_Packing").AddValue true
+		.ReportFilterParameters("Filter_smpShipmentID").AddValue trim(sid)
+		.copies= 3
+		.printreport
+		end with
+		set sig = app.openreport("SM_Shipment_Print\SM_Shipment_Print_HYDRAF.rpt")
+	with sig
+'		.ReportFilterParameters("Certified").ResetValues
+		.ReportFilterParameters("CheckboxGroup_3_Certification").AddValue true
+		.ReportFilterParameters("CheckboxGroup_2_Certified").AddValue true
+		.ReportFilterParameters("CheckboxGroup_4_Packing").AddValue false
+		.ReportFilterParameters("Filter_smpShipmentID").AddValue trim(sid)
+		.copies= 2
+		.printreport
+		end with
+	end if
+End Function
+		
+
+					
+Function EmailShipper
+	if controls("chkSmpPrintPackingSlip").value = -1 then
+		set pff = connection.execute("SELECT smlPartID,smlShipmentLineID FROM ShipmentLines WHERE smlShipmentID=" & app.addquotes(trim(controls("txtSmpShipmentID").value)))
+		cert = 0
+		if not pff.eof then
+		do while not pff.eof 
+			set rstemp = connection.execute("SELECT uimpCertified from Parts where impPartID = " & app.addquotes(trim(pff.fields("smlPartID").Value)))
+			if not rstemp.eof then
+				if cdbl(rstemp.fields("uimpCertified").value) = -1 then
+					cert = 1
+				end if
+			end if
+			pff.MoveNext
+			loop
+		end if
+		pgs = 2
+		if cert = 1 then
+			pgs = 4
+		end if
+		sid = controls("txtSmpShipmentID").value
+		doemail pgs,sid
+		end if
+end function
+
+Function doemail(pgs,sid)
+	if trim(controls("txtSmpCustomerOrganizationID").value) = "DUPAGE" then
+		emailaddress = "john@dupagemachine.com; shipping@dupagemachine.com; chrisp@dupagemachine.com; cesareo@dupagemachine.com; bill@dupagemachine.com; eric@dupagemachine.com; kevin@dupagemachine.com"
+			elseif trim(controls("txtSmpCustomerOrganizationID").value) = "MJCELC" then
+				emailaddress = "tpodgorski@mjcelco.com; DSzyska@mjcelco.com; AZabel@mjcelco.com"
+					elseif trim(controls("txtSmpCustomerOrganizationID").value) = "GATCOR" then
+						emailaddress = "april.warnke@gates.com; Billy.Struble@gates.com; Jason.Brotherton@gates.com; sharon.buckingham@gates.com"
+							elseif trim(controls("txtSmpCustomerOrganizationID").value) = "DDMFG" then
+								emailaddress = "komarekm@ddmfg.com; steventony@ddmfg.com; lalchabram@ddmfg.com"
+									elseif trim(controls("txtSmpCustomerOrganizationID").value) = "NEWDIM" then
+										emailaddress = "sbriggs@newdims.com; shipping@newdims.com; KCondon@newdims.com; vTellez@newdims.com; vicki@newdims.com; MaryF@newdims.com; jguadiana@newdims.com"
+											elseif trim(controls("txtSmpCustomerOrganizationID").value) = "NISSIN" then
+												emailaddress = "Sjennifer.hull@nissinoh.com; kerry.vanatta@nissinoh.com"
+													elseif trim(controls("txtSmpCustomerOrganizationID").value) = "HUTCHINSON" then
+														emailaddress = "HAVS-ASN@hutchinsonna.com"
+															elseif trim(controls("txtSmpCustomerOrganizationID").value) = "GERE" then
+																emailaddress = "jamaya@geremarie.com"
+																	elseif trim(controls("txtSmpCustomerOrganizationID").value) = "TOMENS" then
+																		emailaddress = "shipping@tomenson.com; masanchez@tomenson.com; zach@tomenson.com"
+																			elseif trim(controls("txtSmpCustomerOrganizationID").value) = "LWSCHN" then
+																				emailaddress = "nicoles@lwschneider.com"
+																					elseif trim(controls("txtSmpCustomerOrganizationID").value) = "LIQUID" then
+																						emailaddress = "NJohnson2@idexcorp.com; LCM-Purchasing@idexcorp.com; AMedina@idexcorp.com; DCarman@idexcorp.com; DBlaschke@idexcorp.com"
+																							elseif trim(controls("txtSmpCustomerOrganizationID").value) = "SUMMIT" then
+																								emailaddress = "James@summitmachineworks.com; shipping@summitmachineworks.com"
+																									elseif trim(controls("txtSmpCustomerOrganizationID").value) = "SOLMAN" then
+																										emailaddress = "Samy@solutionsmfg.net; gerardo.macias@solutionsmfg.net; ana.arizmendi@solutionsmfg.net; accounting@solutionsmfg.net"
+																										  elseif trim(controls("txtSmpCustomerOrganizationID").value) = "HEASKF" then
+																												emailaddress = "kim@headlymfg.com"
+																													elseif trim(controls("txtSmpCustomerOrganizationID").value) = "PDQ" then
+																														emailaddress = "Stmorris@pdqtoolandstamping.com; jchevalier@pdqtoolandstamping.com"
+																																elseif trim(controls("txtSmpCustomerOrganizationID").value) = "MW" then
+																																	 emailaddress = "shari@mandwmfg.com"
+																																		  elseif trim(controls("txtSmpCustomerOrganizationID").value) = "CLEMEN" then
+																																				emailaddress = "sharon@winchesterelectronics.com"
+																																					elseif trim(controls("txtSmpCustomerOrganizationID").value) = "HYDACT" then
+																																						emailaddress = "sarah.castlemon@hydacusa.com; gary.briggs@hydacusa.com"
+																																							elseif trim(controls("txtSmpCustomerOrganizationID").value) = "SVIND" then
+																																								emailaddress = "Stephanie.Flint@SVIndustries.com"
+																																									elseif trim(controls("txtSmpCustomerOrganizationID").value) = "WALCO" then
+																																										emailaddress = "andrenec@walcotool.com"
+																																											elseif trim(controls("txtSmpCustomerOrganizationID").value) = "SYCAMO" then
+																																												emailaddress = "helen@sycamoreprecision.com"
+																																													elseif trim(controls("txtSmpCustomerOrganizationID").value) = "HLPREC" then
+																																														emailaddress = "sbryant@hlprecisionmfg.com"
+																																															elseif trim(controls("txtSmpCustomerOrganizationID").value) = "PARATE" then
+																																																emailaddress = "SLaGrippe@paratech.us; jwright@paratech.us; purchasing@paratech.us; WWilliams@paratech.us"
+																																																	elseif trim(controls("txtSmpCustomerOrganizationID").value) = "MERCUR" then
+																																																		emailaddress = "jaranda@MERCPROD.COM; mjimenez@MERCPROD.COM"
+																																																			elseif trim(controls("txtSmpCustomerOrganizationID").value) = "BEMMOL" then
+																																																				emailaddress = "kimberlyt@bemcnc.com; melanief@bemcnc.com"
+																																																					elseif trim(controls("txtSmpCustomerOrganizationID").value) = "BRAUN" then
+																																																						emailaddress = "gloria@hinge1.com"
+																																																					  	elseif trim(controls("txtSmpCustomerOrganizationID").value) = "DANE" then
+																																																						  	emailaddress = "ap@danemfg.com"
+																																																									elseif trim(controls("txtSmpCustomerOrganizationID").value) = "XCEL" then
+																																																						  			emailaddress = "bfoley@bettinardi.com; xcelshipping@xcelcnc.com"
+																																																											elseif trim(controls("txtSmpCustomerOrganizationID").value) = "BETTIN" then
+																																																						  					emailaddress = "morvis@bettinardi.com; TPYRCIK@BETTINARDI.COM"
+		                                                                                                            					elseif trim(controls("txtSmpCustomerOrganizationID").value) = "BASIN" then
+																																																						    						emailaddress = "supplychain@basinprecision.com; invoices@basinprecision.com; colleen.kelly@basinprecision.com; mark.redenz@basinprecision.com; yesenia@saporitofinishing.com"
+																																																															elseif trim(controls("txtSmpCustomerOrganizationID").value) = "ORBIT" then
+																																																						    		  					emailaddress = "suem@orbitmachining.com; brian@orbitmachining.com; marissa@orbitmachining.com"
+																																																																	elseif trim(controls("txtSmpCustomerOrganizationID").value) = "STANMA" then
+																																																						    		  							emailaddress = "tbeyer@stanleymachining.com; tboccabella@stanleymachining.com; ryan.trzaska@stanleymachining.com"
+																																																																			elseif trim(controls("txtSmpCustomerOrganizationID").value) = "TRYSKF" then
+																																																						    		  									emailaddress = "leo@tryson.com"
+																																																																					elseif trim(controls("txtSmpCustomerOrganizationID").value) = "HUIMFG" then
+																																																						    		  											emailaddress = "tgierke@huimfg.com"
+																																																																							elseif trim(controls("txtSmpCustomerOrganizationID").value) = "SCHIND" then
+																																																						    		  													emailaddress = "SIPurchasing@schroederindustries.com"
+																																																																									elseif trim(controls("txtSmpCustomerOrganizationID").value) = "PBCLINEAR" then
+																																																						    		  															emailaddress = "sherry.fry@pbclinear.com; Tyler.Johnson@pbclinear.com; tony.balnius@pbclinear.com"
+																																																																											elseif trim(controls("txtSmpCustomerOrganizationID").value) = "ARKTEC" then
+																																																						    		  																	emailaddress = "jcardenas@arktechno.com; jcammarata@arktechno.com"
+																																																																													elseif trim(controls("txtSmpCustomerOrganizationID").value) = "CASALU" then
+																																																						    		  																			emailaddress = "plambert@castaluminum.onmicrosoft.com; llongsworth@castaluminumsolution.com; smaka@castaluminumsolutions.com"
+																																																																															elseif trim(controls("txtSmpCustomerOrganizationID").value) = "RBROYA" then
+																																																						    		  																					emailaddress = "qualitydept@rbroyal.com"
+																																																																																	elseif trim(controls("txtSmpCustomerOrganizationID").value) = "CWM" then
+																																																						    		  																							emailaddress = "emorell@cwmtl.com"
+																																																																																			elseif trim(controls("txtSmpCustomerOrganizationID").value) = "PRINCE" then
+																																																						    		  																									emailaddress = "steven.daunheimer@princeind.com"	
+																																																																																					elseif trim(controls("txtSmpCustomerOrganizationID").value) = "FEDERA" then
+																																																						    		  																											emailaddress = "gemerick@federalsignal.com; cperez@federalsignal.com"
+																																																																																							elseif trim(controls("txtSmpCustomerOrganizationID").value) = "HEADLY" then
+																																																						    		  																													emailaddress = "crystal@headlymfg.com"	
+																																																																																									elseif trim(controls("txtSmpCustomerOrganizationID").value) = "OTTO" then
+																																																						    		  																															emailaddress = "supplierquality@ottoexcellence.com"
+																																																													                                                           elseif trim(controls("txtSmpCustomerOrganizationID").value) = "STP" then
+																																																						    		  																															   emailaddress = "sross@smalltubeproducts.com; naurelio@PROGRESSRAIL.com" 
+'																																																															
+																																																								
+	end if
+	if pgs = 2 then
+			set oReport = app.openreport("SM_Shipment_Print\SM_Shipment_Print_CJS.rpt")
+		with oReport
+		.ReportFilterParameters("CheckboxGroup_2_Certified").AddValue true
+		.ReportFilterParameters("CheckboxGroup_3_Certification").AddValue true
+		.ReportFilterParameters("CheckboxGroup_4_Packing").AddValue false
+		.ReportFilterParameters("Filter_smpShipmentID").AddValue trim(sid)
+		.emailreport(emailaddress)
+		.Copies= 1
+		.Collate=False
+		.Duplex=False
+		end with
+	elseif pgs > 2 then	
+		set crt = app.openreport("SM_Shipment_Print\SM_Shipment_Print_CJS.rpt")
+	with crt 
+		.ReportFilterParameters("CheckboxGroup_3_Certification").AddValue false
+		.ReportFilterParameters("CheckboxGroup_2_Certified").AddValue false
+		.ReportFilterParameters("CheckboxGroup_4_Packing").AddValue true
+		.ReportFilterParameters("Filter_smpShipmentID").AddValue trim(sid)
+		.copies= 1
+		.emailreport(emailaddress)
+		end with
+	end if
+End Function
+
+
+Function Quartile 
+	set rsQuartile = connection.Execute("SELECT ucmoQuartile FROM Organizations WHERE cmoOrganizationID =" & _
+	app.AddQuotes(trim(controls("txtSmpCustomerOrganizationID").value)))
+	if not rsQuartile.eof then
+	quart = trim(rsQuartile.fields("ucmoQuartile").value)
+	end if
+	if quart = "4" then 
+		controls("Q4Test").Visible = true
+			else controls("Q4Test").Visible = false
+	end if
+end function
+		
+
+
+Function txtSmpCustomerOrganizationID_UserChange()
+	Quartile	
+End Function
+
+Function M1DataControl_RecordChange()
+	Quartile	
+End Function
+
+function OpQuantity
+	set rsjob = connection.Execute("SELECT smlJobID FROM ShipmentLines WHERE smlShipmentID =" & _
+	app.AddQuotes(trim(controls("txtSmpShipmentID").value)))
+	if not rsjob.eof then 
+		do while not rsjob.eof
+			jobid = trim(rsjob.fields("smlJobID").value)
+			set rsquant = connection.execute("SELECT jmoJobID,jmoQuantityComplete FROM JobOperations WHERE jmoJobID=" & _
+			app.addquotes(jobid))
+			if not rsquant.eof then
+				do while not rsquant.eof
+				quant = rsquant.fields("jmoQuantityComplete").value
+				rsquant.MoveNext 
+					loop
+				if quant = "0" then
+				app.MessageBox "Job " & jobid & " Has Operations That Have Not Been Completed.           Please Review Job Traveler Prior To Shipping", VbOKOnly+VbExclamation, "Warning"
+				end if
+			end if
+			rsjob.MoveNext
+		loop
+	end if
+'	set rsquant = connection.execute("SELECT jmoJobID,jmoQuantityComplete FROM JobOperations WHERE jmoJobID=" & _
+'	app.addquotes(jobid))
+'	if not rsquant.eof then
+'		do while not rsquant.eof
+'			quant = rsquant.fields("jmoQuantityComplete").value
+'			rsquant.MoveNext
+'			if quant = "0" then 
+'				exit do
+'			end if
+'			loop
+'	end if
+'	msgbox quant
+end function
+			
+'Function QV
+''	set rsjob2 = connection.Execute("SELECT smlJobID FROM ShipmentLines WHERE smlShipmentID =" & _
+''	app.AddQuotes(trim(controls("txtSmpShipmentID").value)))
+''	if not rsjob2.eof then 
+''		do while not rsjob2.eof
+''			jobid = trim(rsjob2.fields("smlJobID").value)
+''			set rsQV = connection.execute("SELECT jmpJobID,ujmpQuoteVerificationCheckBox,ujmpQuoteVerificationDone FROM Jobs WHERE jmpJobID=" & _
+''			app.addquotes(jobid))
+''			if not rsQV.eof then
+''				do while not rsQV.eof
+''				QV = rsQV.fields("ujmpQuoteVerificationCheckBox").value	
+''				QVD = rsQV.fields("ujmpQuoteVerificationDone").value
+''				if QV = "-1" and QVD = "0" then
+''				app.MessageBox "Job " & jobid & " Has Not Had Quotation Verification Completed.           Please Verify Prior To Shipping", VbOKOnly+VbExclamation, "Warning"
+''				trim(rsjob2.fields("smlJobID").value) = ""
+''				end if
+''			rsjob.MoveNext
+''		loop
+''	end if
+'	set rsjob = connection.Execute("SELECT smlJobID FROM ShipmentLines WHERE smlShipmentID =" & _
+'	app.AddQuotes(trim(controls("txtSmpShipmentID").value)))
+'	if not rsjob.eof then 
+'		do while not rsjob.eof
+'			jobid = trim(rsjob.fields("smlJobID").value)
+'			set rsquant = connection.execute("SELECT jmpJobID,ujmpQuoteVerificationCheckBox,ujmpQuoteVerificationDone FROM Jobs WHERE jmpJobID=" & _
+'			app.addquotes(jobid))
+'			if not rsquant.eof then
+'				do while not rsquant.eof
+'				QV = rsquant.fields("ujmpQuoteVerificationCheckBox").value
+'				QV2 = rsquant.fields("ujmpQuoteVerificationDone").value
+'				rsquant.MoveNext 
+'					loop
+'				if QV = "-1" and QVD = "0" then
+'				app.MessageBox "Job " & jobid & " Has Not Had Quotation Verification Completed.           Please Verify Prior To Shipping", VbOKOnly+VbExclamation, "Warning"
+'				trim(rsjob2.fields("smlJobID").value) = ""
+'				end if
+'			end if
+'			rsjob.MoveNext
+'		loop
+'	end if
+'End Function	
+
+
+
+Function M1Command2_Click()
+	OPQuantity
+	QV	
+End Function
+
+Function M1DataControl_RecordSave()
+	OpQuantity	
+End Function
+
+
+Function cmdAddJob_Click()
+' QV
+End Function
+
+Function cmdAddOrder_Click()
+	
+End Function
+
+Function txtSmlPartLongDescriptionRTF_UserChange()
+	
+End Function
